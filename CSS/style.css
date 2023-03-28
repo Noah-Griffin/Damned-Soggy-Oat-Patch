@@ -7,10 +7,12 @@ body{
   background-color: white;
   color: #DE0F1B;
   overflow: hidden;
+  display: flex;
 }
 
 img{
-  text-align: center;
+  justify-content: center;
+  align-items: center;
   max-width: 100%;
   max-height: 100%;
 }
@@ -34,6 +36,7 @@ img{
   
   #mainImage{
     margin: auto;
+    margin-top: 5vh;
     padding: 40px;
     width: 75vh;
     z-index: -4;
@@ -56,14 +59,17 @@ img{
     left: -1vw;
     bottom: 0vh;
     background: #DE0F1B;
-    width: 102vw;
+    width: 102%;
     height: 4vh; 
   }
 }
 
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 1080px) {
   #title{
+    position: absolute;
+    display: block;
+    margin: auto;
     padding: 20px;
     width: 40vw;
     left: 30vw;
@@ -73,7 +79,9 @@ img{
   #mainImage{
     padding: 40px;
     width: 75vh;
+    /* height: 75vh; */
     max-height: 80vh;
+    z-index: -4;
   }
   
   #footer{
@@ -82,5 +90,4 @@ img{
     width: 40vw;
     left: 30vw;
   }
-  
 }
