@@ -1,32 +1,312 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-      <meta charset="utf-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="CSS/style.css">
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-      <title>Damned Soggy Oat Patch</title>
+<!DOCTYPE html><html lang="en"><head>
+    <script src="p5.js"></script>
+    <script src="arrays.js"></script>
+    <script src="sketch.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="icon" type="image/png" href="assets/ghost fav 2.png"/> -->
+
   </head>
-  <body>
-    <div id="title">
-       <img src="assets/main-title.png">
-    </div>
-    
-    <div id="mainImage">
-      <img src="assets/oat-img.png">
-    </div>
-    
-    <div id="boxes">
+    <body>
+      <div id = "name">
+        <a href="/"><img src="assets/main-title.png"></a>
+      </div>
 
-    </div>
+      <section class="parent">
+        <div id = "mainHeaders">
+          <button id="mainHeader" onClick="contentSelect(0)">ARTISTS</button><br>
+          <button id="mainHeader" onClick="contentSelect(1)">ABOUT</button><br>
+          <button id="mainHeader" onClick="contentSelect(2)">FORUM</button><br>
+          <button id="mainHeader" onClick="contentSelect(3)">PERFORMANCES</button><br>
+        </div>
 
-    <div id="footer">
-      <img src="assets/dates.png">
-    </div>
+        <div hidden id = "artists">
+          <button onClick="workDisplay('agata')">AGATA GENISSEL</button><br>
+          <button onClick="workDisplay('ana')">ANA ALVAREZ</button><br>
+          <button onClick="workDisplay('anck')">ANCK-SU-NAMUN GHERMAC</button><br>
+          <!-- <button onClick="workDisplay('Auryn')">AURYN REEVE</button><br> -->
+          <button onClick="workDisplay('beiqing')">BEIQING JIANG</button><br>
+          <button onClick="workDisplay('devon')">DEVON KENNEDY</button><br>
+          <button onClick="workDisplay('feier')">FEIER MENG</button><br>
+          <button onClick="workDisplay('guro')">GURO SOUP</button><br>
+          <button onClick="workDisplay('isabella')">ISABELLA BLUE</button><br>
+          <button onClick="workDisplay('kaito')">KAITO HIRAKAWA</button><br>
+          <button onClick="workDisplay('kelsey')">KELSEY QIU</button><br>
+          <button onClick="workDisplay('luna')">LUNA STACY</button><br>
+          <button onClick="workDisplay('mary')">MARY TALLONTIRE</button><br>
+          <button onClick="workDisplay('misia')">MISIA JANUSZ</button><br>
+          <button onClick="workDisplay('noah')">NOAH GRIFFIN</button><br>
+          <button onClick="workDisplay('szymon')">SZYMON FURI BRZOZOWSKI</button><br>
+          <button onClick="workDisplay('theo')">THEO GOFF</button><br>
+          <button onClick="workDisplay('tiffany')">TIFFANY TANG</button><br>
+          <button onClick="workDisplay('vendela')">VENDELA HAAKONSEN</button><br>
+          <button onClick="workDisplay('xinde')">XINDE REN</button><br>
+          <button onClick="workDisplay('yangqiandai')">YANGQIANDI SI</button><br>
+          <button onClick="workDisplay('yiying')">YIYING JAD~E LIN</button><br>
+        </div>
 
-    <div id="bottomBar">
-      
-    </div>
+        <div id = "landingImage">
+          <img src="assets/oat-img.png">
+        </div>
 
-  </body>
-</html>
+        <div id = "contentBox">
+          <div hidden id = "about">
+            <h2>Damned Soggy Oat Patch</h2>
+              <p>Fictioning a way through a labyrinthine ecosystem of narrative histories
+              <br><br>
+              Practitioners from BSc Digital Arts Computing present the exhibition and public programme “Damned Soggy Oat Patch”. Drawing on ideas and theories from Ursula K. Le Guin’s “The Carrier Bag Theory of Fiction” to question and compose a remixed understanding of the fluid boundaries between fictions, fabulations, and non-fictional narratives.
+              <br><br>
+              Take a stroll through the labyrinth of installation, game art, mixed reality, video, sculpture, photography and mixed-media as the exhibiting artists play to their narrative strengths, calling to processes of creative symbiosis as …space, matter, technology, time, and fiction... collide.
+              <br><br>
+              Through engaging with “fiction” as an ongoing artistic practice of “fictioning”, “Damned Soggy Oat Patch” provokes the viewer to question and challenge presupposed notions of certainty, linearity and narrative history. By creating, recreating, and re-mixing a range of immersive experiences, the artists guide the viewer through as they re-contextualise the margins between the real, the uncanny, and the otherworldly altogether.
+              <br><br>
+              Damned Soggy Oat Patch opens Thursday 4th of May at 6pm,  continues 11am-8pm Fri/Sat/Sun. </p>
+            </div>
+  
+          <div hidden id = "forum">
+            <p>JESS PEMBERTON</p>
+            <img src="assets/forum images/jesspemberton.jpg">
+            <p><br>
+            Jess is a digital collage artist who creates digital Solarpunk online landscapes, called Forests of the Web.
+            <br><br>
+            Having graduated from MA Digital Media Arts at Brighton University in 2020, her digital practice has taken off. Last year she was a participant in Arebyte Gallery’s Hotel Generation programme and more recently participated in the Master Class programme with the Zabludowicz Collection.
+            <br><br>
+            In her recent online exhibition with Arebyte Gallery, WIP, she presents a work in progress > a speculative Solarpunk future. This future imagines a current developing technology, harnessing algae’s process of photosynthesis to generate electricity, integrated into society and populated by a new species called Alan Voltaics.<br><br><br>
+            </p>
+            <p>JULIA SPINOLA</p>
+            <img src="assets/forum images/julia.png">
+            <p><br>Julia Spinola is a video game developer, artist, and writer with an MA in Video Game Design from the National Film and Television School, where her dissertation focused on the possibilities for gamification to increase empathy in players. Her current project is a game that allows players to make music with underwater sounds. She also writes about science fiction, machine learning, and speculative storytelling.</p>
+
+          </div>
+  
+          <div hidden id = "performances">
+            <img src="assets/DSOP performance schedule-01.png">
+          </div>
+          
+          <div class="projects">
+            <div hidden id = "agata">
+              <h2>AGATA GENISSEL</h2>
+              <p><br>Agata Genissel works with experimental modes of fiction through a range of computational processes. This piece explores an experimental podcast format, using spatial audio techniques to critique the language of authority reflected in dominant tones throughout society. As these spatial dynamics reflect the attitudes of authority embodied by her characters, the artist encourages you to put on the headphones for further immersion.  
+                <br>
+                Also working with real-time audio synthesis software, no input-mixing and live electronics, she will use these techniques to re-sample and deconstruct the work in a live performance context.  
+                <br><br>
+                Performance times: 
+                <br><br>
+                Thursday 4th May, 9pm 
+                <br><br>
+                Saturday 6th May, 4:50pm </p>
+              <img src="assets/artist images/crud bucks.png">
+              <p><br>The Jack Brown Show, Ep.303: ‘Fighting the Good Fight’ 
+                <br><br>
+                “Enter the four overlords of the universe. The language of authority booms loudly as it makes conspiracies out of thin air, expanding the four corners of the room into the four pillars of space and time - bending to the wills of our speakers. They world-build through their distaste and ignorance, relating to each other in a bid to reject the despair that o’ so desperately creeps into their world vision. These are the bros that need each other now more than ever; but, most of all, these are the bros that fail to do themselves any favours: they must extinguish chaos, impart all knowledge, and of course, fight the good fight.  
+                <br><br>
+                Episode 303 voices respected hot takes from Dr Jon Miller, Pete Clark, Steven Forbes and, the one and only, Jack Brown. Sponsored by Crudbucks.”  
+                <br><br>
+                This piece plays on and parodies the languages of authority through the prism of toxic masculinity and hyper-conservatism; these socio-cultural agendas, that fester in society’s subconscious, are expanded on through the format of the “bro-cast”. </p>
+              <p><br>agatagenissel@gmail.com</p>
+            </div>
+
+            <div hidden id = "ana">
+              <h2>ANA ALVAREZ</h2>
+              <p><br>I'm a London-based digital artist and creative coder. I use many different materials and techniques, mostly digital and computational but also more traditional artforms. My main focus at the moment is interactive 3D work, and more specifically the creation of VR experiences. Through my practice I attempt to explore the complex relationship between the human and non-human worlds, breaking down the fabricated barriers that separate the two.</p>
+              <img src="assets/artist images/Ana María Álvarez Martínez 2.jpg">
+              <p><br>Phoenix Valley, the piece I will be presenting in this exhibition, is a physically interactive, mixed reality installation which explores the reinvention of ecosystems through interspecies disturbance by combining VR and crochet. </p>
+              <p><br>Website: https://analma.art/welcome<br>
+                Instagram: https://www.instagram.com/analmadraws/<br>
+                Vimeo: https://vimeo.com/user137382527</p>
+            </div>
+
+            <div hidden id = "anck">
+              <h2>ANCK-SU-NAMUN GHERMAC</h2>
+              <img src="assets/artist images/Ghermac.png">
+              <p><br>Trying to make an interactive tracking piece using my webcam. It's still a work in progress. The image upload is how I'm trying to make the tracking camera look like, the aesthetic bit of it, but the tracking motion part of my interaction is done. It's just the process of merging everything together.</p>
+              <p><br>Instagram - ba.guettee<br>
+                email - asabo001@gold.ac.uk</p>
+            </div>
+
+            <!-- <div hidden id = "auryn">
+              <h2>AURYN REEVE</h2>
+              <p><br>Auryn is a multimedia artist that specialises in moving image and computational art. Their practice involves using emerging techniques of knowledge generation, particularly from a queer interpretation of reality. Investigating  the construction of identities in virtual settings they demonstrate how corporeal acts might establish agency and the capacity for resistance within digital landscapes. Their initiatives, which range from generative machine learning models to video manipulation, are depicted in surrealist artwork that reveals the flood of information that pervades our digital experience. Responding to the current state of queer people navigating online places, they have authored critical essays such as 'Rendering Queer Bodies in Virtual Spaces,' which can be seen on the CLOT Magazine website.</p>
+              <p><br>This project titled ‘Subject Permanence” investigates methodologies for the subject to establish agency and a communal sense of belonging. This is particularly evident within virtual spaces as emerging environments to develop and nurture identity formation. As a speculative work comprising of moving image and interactive virtual environment,  its purpose is to archive queer ephemera and  moments of collective experience that would otherwise be lost within heteronormative  trajectories of time and data accumulation. Images and footage have been processed through adversarial neural networks that generate a virtual embossing of archived media. Through these methods the understandings on the permanence of queer experiences is reconfigured to produce new potentiality for representation within data.</p>
+              <p><br>Instagram @4uryn <br>Email aurynreeve@gmail.com</p>
+            </div> -->
+
+            <div hidden id = "beiqing">
+              <h2>BEIQING JIANG</h2>
+              <img src="assets/artist images/juaner.png">
+              <p><br>This is an interactive project that consists of a button shaped like a brain and a screen that allows you to play various videos by pressing the button. The button is divided into four parts, allowing for different combinations of buttons to be pressed in order to interact with or display various videos.</p>
+              <p><br>Ins:art_evajiang</p>
+            </div>
+
+            <div hidden id = "devon">
+              <h2>DEVON KENNEDY</h2>
+              <img src="assets/artist images/Devon Kennedy.png">
+              <p><br>Can you prove you are human? Based on the CAPTCHA, this piece aims to look at the border between human and artificial intelligence by making my user prove they are not a bot through a variety of CAPTCHA themed puzzles. Made using C++ and openFrameworks.</p>
+              <p><br>www.devonkennedy.co.uk</p>
+            </div>
+
+            <div hidden id = "feier">
+              <h2>FEIER MENG</h2>
+              <p><br>Feier Meng, based in London, working with digital arts in 2D/3D motion and physical interaction with sound and images. Interested in art therapy and the connection between work and mental health care. Aspires to express emotions through the works.</p>
+              <img src="assets/artist images/f1 - Feier ee.jpg">
+              <p><br>This work is a physical ASMR device which allows viewer to gain both visual and audio feedback from ASMR. The intention is to explore the boundaries of ASMR and to explore the possibilities of ASMR innovation. 
+                <br><br>
+                Through the audio visualization coding it allows to generate the animation along with physical interaction with the audio display, which will be projected directly onto the viewer's body to produce visual disorientation. Engaging in visual and auditory collaboration and competition. It's aimed to be a part of the therapy art for anxiety and depression.</p>
+              <p><br>Instagram: faeimyree_
+                Email: feier_m01@outlook.com</p>
+            </div>
+
+            <div hidden id = "guro">
+              <h2>GURO SOUP</h2>
+              <p><br>"guro soup is a mixed media artist who primarily works with the intention of merging the digital space and physical installations. Inspired by science fiction, early/post-Internet aesthetic, horror and surrealism, soup aims to bring a sense of unease and confusion into peoples lives uwu"</p>
+              <img src="assets/artist images/Bob Ross.png">
+              <p><br>title: //i can't wait for the techno-apocalypse// <br>details: interactive video projection</p>
+              <p><br>insta: @guro_soup</p>
+            </div>
+
+            <div hidden id = "isabella">
+              <h2>ISABELLA BLUE</h2>
+              <p><br>In her third and final year at Goldsmiths, Isabella Blue is a visual artist who’s practice revolves around their identity and personal experiences. Creating works using moving image, computation, installation and ethnography. Isabella has been working around the theme identity as a way of starting to understand herself. A learning experience as well as an art practice, these topics lead her into working in the digital realm, which brings us to the 2023 exhibited work called “Self-Curation” </p>
+              <img src="assets/artist images/Isabella Paterson.jpeg">
+              <p><br>“Self-Curation” is an examination of the different forms we take, depicting identity in two realms, offline and online, which are always changing. Altering identities though a mixed media approach of photography and physical computing. 
+                <br><br>
+                This piece is a way of questioning the online self, how it effects our sense of reality and how we are perceived or perceiving others. The personal collection of work is a conversation of identity confusion. Taking experiences of the artist and questioning the ideas surrounding self-curation and identity. Looking to learn and explore the ideas behind one’s true self by attempting to answer the questions posed by Erving Goffman’s 1956 theory “The Presentation of Self in Everyday Life”, turning them into conversational pieces for others to contribute to and to provoke critical thinking surrounding the question “who am I?”.</p>
+              <p><br>Instagram - @isabellablueart <br>Email- issy.blue.paterson@gmail.com</p>
+            </div>
+
+            <div hidden id = "kaito">
+              <h2>KAITO HIRAKAWA</h2>
+              <p><br>year 1 DAC student</p>
+              <p><br>AR board game developed using unity </p>
+              <p><br>instagram @bjh1196</p>
+            </div>
+
+            <div hidden id = "kelsey">
+              <h2>KELSEY QIU</h2>
+              <p><br>DAC year 1</p>
+              <p><br>This work is about the increasing number of buildings in modern cities and the increasing height of the floors.  It is possible that we will live in a hole in the building, buried, without seeing the sun or the sky.  But there is no way to stop this, because the population is increasing and growing, so I had the idea that if buildings grew like plants, and grew uncontrollably, I wonder what the visual effect would be</p>
+              <p><br>xinerqiu97@gmail.com</p>
+            </div>
+
+            <div hidden id = "luna">
+              <h2>LUNA STACY</h2>
+              <p><br>Luna Stacy (Born 2002) is an American artist living and working in  London. Her broad practice incorporates various contemporary media techniques from her fine art background and current study of digital arts.</p>
+              <img src="assets/artist images/Luna Stacy.png">
+              <p><br>The artwork: Waiting in 2011, utilizes her personal archive of audio samples and visual artifacts sourced between London, her city of birth, NYC, and her family's homes in the more rural parts of America. Producing a hyper-realized collage, drawing upon intimate sensations of separation from the abstract concept of 'home.' In an attempt to reach out, Luna Stacy, with her work, Waiting in 2011, breathes a sad sigh of relief, acknowledging the anxiety of memory and what it takes from an individual to clutch onto what is already lost.</p>
+              <p><br>Lunastacy60@gmail.com, lstac001@gold.ac.uk</p>
+            </div>
+
+            <div hidden id = "mary">
+              <h2>MARY TALLONTIRE</h2>
+              <p><br>London based computational artist working to create projects through code, currently working towards a BSc in Digital Arts Computing at Goldsmiths University, London. Pieces currently revolve around digital worlding, procedural generation, simulation and story worlds. Presently working with the Unity game engine as well as openFrameworks with C++, in the future I hope to delve more into digital storytelling, immersive experiences, and game development to create more expansive worlds and stories with more interaction. </p>
+              <p><br>My piece for Damned Soggy Oat Patch is Nowhere Actually Existing. Created in Unity, it is an exploration of simulation and the concept of a utopia. Through using simulation as a way to illustrate how a person sees the world, I present my personal view of a utopia with visions of a harmonious ecosystem and sustainable community in tune with the world around it. However, it is merely a simulation; it isn't real, and it will never physically exist. This utopia isn’t real, and it will assure you’re aware of this.  Can be found online at matallon.itch.io/no </p>
+              <p><br>https://twitter.com/marytallontire <br>
+                https://www.instagram.com/marytallontire/ <br>
+                https://matallon.itch.io/</p>
+            </div>
+
+            <div hidden id = "misia">
+              <h2>MISIA JANUSZ</h2>
+              <p><br>she/her</p>
+              <iframe src="https://player.vimeo.com/video/819598663?h=e007143688" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+              <p><a href="https://vimeo.com/819598663">0001.mp4</a> from <a href="https://vimeo.com/user116370905">Oreganillio</a> on <a href="https://vimeo.com">Vimeo</a>.</p>">
+              <p><br>I enjoy turning doodles into physical things, currently focusing on illustration and textiles</p>
+              <p><br>@steirnon</p>
+            </div>
+
+            <div hidden id = "noah">
+              <h2>NOAH GRIFFIN</h2>
+              <p><br>Noah Griffin (born 2000) works in computational art and sound to explore the potentials of alienation and saturation induced by contemporary life.</p>
+              <img src="assets/artist images/noahgriffin.png">
+              <p><br>'Bleeding into the world’ is a 5 channel, audio reactive film composed of recoloured video footage, field recordings and AI generated samples that follows the thoughts, memories and speculations of a patient undergoing a process of becoming numbed to all sensation as an escape from the numbness induced by the entropic, constant stimulation of quotidian existence.</p>
+              <p><br>@oaoaioii <br>www.noahgriffin.xyz <br>noahjlgriffin@gmail.com</p>
+            </div>
+
+            <div hidden id = "szymon">
+              <h2>SZYMON FURI BRZOZOWSKI</h2>
+              <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/Crgg5GbrLHB/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/Crgg5GbrLHB/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/Crgg5GbrLHB/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by ☆◡๑*｡. my anime page .｡*๑◡☆ (@cringe.4.ur.spirit)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+              <p><br>
+                Is dreaming about pre social media times melancholy porn? 
+                <br><br>
+                (Mis)information Kiosk is an installation about living terminally online, in a positive feedback loop of information. My attention span is mutating in response to the short video, tiktok-reel-story format. I am engaging in a dialogue with the algorithm by responding to the content I want it to show me, delving into the recesses of the data flowing through the structures of social media platforms. As the answer, I built an instrument that allows me to create cut up remixes of footage found on Instagram and Tiktok, expressing my own version of the cacophony I experience on my feed. The shift into a process based work allows to create artworks ad infinitum. 
+                This multichannel video manipulation tool is used to explore the practice of meme culture production known as shitposting, where bursts of poor quality content are released to overload the algorithm. I want to contribute to the collapse between high and low culture. Presenting tiktoks in a gallery space might seem cringe, another meme culture term meaning a brazen naïveté or an unfamiliarity with the protocols of a particular community. Could TikToks be considered art? Accepting a reality where short format content perverts the collective psyche is an uncomfortable, yet liberating feeling. 
+                By alluding to the form of the monolith combined with an information kiosk of corrupted internet media, I hope to stress how meaningful these contemporary changes to the mind are, altering the dopamine release system permanently, evolving humans through its own cultural product, constantly optimized for maximum profit.</p>
+              <p><br>@cringe.4.ur.spirit<br>
+                @furi.clubuser.216</p>
+            </div>
+
+            <div hidden id = "theo">
+              <h2>THEO GOFF</h2>
+              <img src="assets/artist images/theogodd.jpg">
+              <p><br>> scene outfit output 
+                <br><br>
+                A pose detection machine learning model is running live, over two performances by Isabella Pinto. 
+               The program is repeatedly looking for the most similar still frames to compare and display over the video input. A conversation has been manufactured between two strangers, Gerry Mitchell and Voldy Moyo, where they speak in Deptford and Wakefield respectively, of love within a ‘shabby landscape’. 
+               The aluminium structure is a physical accompaniment to the movement and the words of these three people, who are all drawn to as well as constricted by the cityscape’s ever developing terrain.  </p>
+              <p><br>instagram - @theogodd</p>
+            </div>
+
+            <div hidden id = "tiffany">
+              <h2>TIFFANY TANG</h2>
+              <p><br>Tiffany Tang(b. 2001, Taipei) is an artist who works with video, performance, installation, and creative computing. Her work explores the relationship between the body, intimacy, and desire, and seeks to trace the connections between the inner and outer self. Through her practice, she employs multiple meanings through different constructs and explores the fetishization of objects and materiality.</p>
+              <img src="assets/artist images/Tiffany Tang.png">
+              <p><br>“all women you are human” is translated text from a pre-trained text model of Shin Yuan Gao's *Soul Mountain*. When looking for a literary expression to carry out the feeling of "seeking", the algorithmic path brings *Soul Mountain* from the ancient Chinese literature *Classic of Mountains and Seas*. The *Classic of Mountains and Seas*, also known as *Shanhai jing*, is an anonymous compilation of mythological geography, medicine and creatures. *Soul Mountain* explores the relationship between humans and the natural world that draws heavily from *The Classic of Mountains and Seas.* Auto-generated text becomes expressive and psychic as each character emerges from a mouse click. The generated text suggests an ambiguous narrative here. Thoughts are expressed through text, but when the machine learns from the text, does its meaning stay the same?</p>
+              <p><br>email: tiffanytang0128@gmail.com <br>insta: @gnatttang</p>
+            </div>
+
+            <div hidden id = "vendela">
+              <h2>VENDELA HAAKONSEN</h2>
+              <img src="assets/artist images/Vendela Aurora.png">
+              <p><br>As someone who has experienced a difficult past, I turned to art initially as a means of therapy and self-expression. However, as I continue to grow and evolve, I question my motives and the role that creating art plays in my life. Is it merely a way to revisit and reconcile my past, or does it hold an alternative significance for my future? This piece is an exploration of that internal conflict.
+                <br><br>
+                Using Pure Data and two speakers accompanied by acoustic structures, I create an immersive sound experience that gives the illusion of echoing. In this piece, the echoes serve as a metaphor for my past and internal chaos. They continue to reverberate in the present, becoming increasingly distant as time passes. I question how this distance will shape and influence my future decisions.
+                <br><br>
+                The sound in this piece embodies a sense of ambiguity and uncertainty, much like my own personal journey. It also represents a willingness to embrace the unknown, the possibility of change, and forgiveness as I seek to transcend the limits of my personal experience.</p>
+              <p><br>instagram: venaur_art</p>
+            </div>
+
+            <div hidden id = "xinde">
+              <h2>XINDE REN</h2>
+              <p><br>Xinde Ren (*2002) work spans the multifaceted medium of video, animation, and installation, examining intimacy in the Digital age. She is currently pursuing the BSc in Digital Art Computing at Goldsmiths.</p>
+              <img src="assets/artist images/Xinde Ren.jpg">
+              <p><br>What drives people to meet each other? I believe those casual coincidences are reminding you of the answer. Welcome to my garden. Looking at my face, what is in your mind? The hardest part you have overcome and are ready to protect your gain. Your life is about to change dramatically... The media circulates the news that makes people extremely anxious, but the reality is more painful and cruel. As small individuals, how lucky we are to have the opportunity to meet each other in this vast world. War, race, discrimination, people hurt each other intentionally or unintentionally. Staring at my face, we are so different but so close to each other.
+                <br><br>
+                This work was inspired by Polish writer Stanisław Lem's 1961 science fiction novel Solaris, and records my most sensitive moments. Eventually, it will drift in the sea, burn-in ashes and disappear in silence. This work records my most sensitive moments. Personal memory has nothing to do with you, has nothing to do with him or her. When I disappear, it also disappears. We live together, and the gap between us is so deep. What I feel painful or happy may not be felt by others. We are all independent individuals, but I believe some connection between us can resolve the contradiction. I try to arouse everyone's resonance with the most personal things, because we all have one thing in common, that is, we are all special. This time I tried to open myself. You are welcome to come in and have a look. 
+                <br><br>
+                This work is made by Arduino, Blender, C++, and TouchDesigner.</p>
+              <p><br>IG: @xxexybabie_xx, <br>Email: renxinde2019@outlook.com</p>
+            </div> 
+
+            <div hidden id = "yangqiandai">
+              <h2>YANGQIANDAI SI</h2>
+              <img src="assets/artist images/Yangqiandai Si.png">
+              <p><br>This project is about a virtual plant installation with a dynamic background. This piece aims to use digital technology to innovate traditional Chinese culture in order to preserve and transmit it. The prototype of the flower is derived from a fabled plant called Glowing Grass in Youyang Miscellany and the bamboo vase originated from one of the traditional Chinese vases.</p>
+              <p><br>instagram: abigail_qdai <br>
+                email: abigail131419@outlook.com</p>
+            </div>
+
+            <div hidden id = "yiying">
+              <h2>YIYING JADE LIN</h2>
+              <p><br>sometime i wish i were an alien (work in progress)</p>
+              <img src="assets/artist images/Jade Lin.png">
+              <p><br>enter a world filled with gibberish from a 'legal' alien. a PICO-8 game about home, freedom, and displacement.  
+                <br><br>
+                for those who are haunted by borders. </p>
+              <p><br>https://strawberrycongee.itch.io/ <br>instagram: strawberrycong33 <br>youtube: https://www.youtube.com/channel/UCbvWOO-BGyFvHw1BZVs9oZg</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+</body></html>
