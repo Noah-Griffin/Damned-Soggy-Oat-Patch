@@ -1,0 +1,206 @@
+.grab {cursor: grab;}
+
+html, body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  margin-left: 0px;
+  margin-top: 0px;
+  cursor: grab;
+}
+
+a{
+  color: #d22527;
+  text-decoration: none;
+}
+
+hr{
+  border: #d22527;
+}
+
+button {
+  color: #d22527;
+  background-color: inherit;
+  border: none;
+  outline: none;
+  text-align: left;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 0.5vh;
+}
+
+#contentBox img{
+  filter: blur(0px);
+}
+
+button:hover {
+  color: white;
+  font-style: italic;
+  background-color: #d22527;
+}
+
+button:focus {
+  color: white;
+  font-style: italic;
+  background-color: #d22527;
+}
+
+.parent:hover > #contentBox, .parent:hover > #bio, .parent:hover > #writingBox{
+  filter: blur(8px);
+}
+
+.parent:hover > #contentBox:hover, .parent:hover > #bio:hover, .parent:hover > #writingBox:hover{
+  filter: blur(0px);
+}
+
+
+
+@media only screen and (min-width: 0px) {
+  #name{
+    background: white;
+    position: fixed;
+    top: 0vh;
+    margin-left: 6vw;
+    z-index: 2;
+    width: 100%;
+    box-shadow: 0 0 5px 5px white;
+  }
+
+  #name img{
+    margin-top: 2vh;
+    max-height: 20vh;
+    /* margin-left: 2vw; */
+    /* margin-right: 2vw; */
+    z-index: 2;
+  }
+
+  #landingImage{
+    z-index: -2;
+    position: fixed;
+    top: 24vh;
+    padding-bottom: 4vw;
+    left: 2vw;
+  }
+
+  #landingImage img{
+    width: 86vw;
+  }
+
+  #mainHeaders{
+    position: absolute;
+    font-size: 16px;
+    top: 26vh;
+    left: 7vw;
+    /* background-color: white; */
+  }
+
+  #artists{
+    position: absolute;
+    left: 7vw;
+    top: 50vh;
+    padding-bottom: 12vh;
+  }
+
+  #about{
+    position: absolute;
+    left: 6vw;
+    padding-bottom: 12vh;
+  }
+
+  #forum{
+    position: absolute;
+    left: 6vw;
+    padding-bottom: 12vh;
+  }
+
+  button{
+    font-size: 14px;
+    width: 84vw;
+  }
+
+  #contentBox{
+    position: absolute;
+
+    left: 2vw;
+    top: 40vh;
+    right: 2vw;
+    margin: 6vw;
+    font-size: 12px;
+    padding-bottom: 4vw;
+  }
+
+  #contentBox img{
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    float: right;
+    width: 100%;
+  }
+}
+
+
+@media only screen and (min-width: 700px) {
+  #name{
+    position: fixed;
+    top: 0vh;
+    margin-left: 6vw;
+    max-width: 26vw;
+  }
+
+  #name img{
+    margin-left: 0vw;
+    margin-top: 6vh;
+    max-width: 26vw;
+  }
+
+  button{
+    font-size: 13px;
+    width: 26vw;
+  }
+
+  #landingImage{
+    left: 9vw;
+  }
+
+  #mainHeaders{
+    position: absolute;
+    font-size: 16px;
+    top: 24vh;
+    left: 6vw;
+  }
+
+  #artists{
+    left: 6vw;
+    top: 45vh;
+    /* padding-bottom: 12vh; */
+  }
+
+  #about{
+    position: absolute;
+    top: 6vh;
+    left: 6vw;
+    padding-bottom: 12vh;
+  }
+
+  #forum{
+    position: absolute;
+    top: 6vh;
+    left: 6vw;
+    padding-bottom: 12vh;
+  }
+
+  #contentBox{
+    left: 40vw;
+    top: 4vh;
+    right: 4vh;
+    padding-bottom: 9vh;
+    font-size: 10px
+  }
+
+  #contentBox img{
+    margin-top: 0vh;
+    margin-bottom: 1vh;
+  }
+}
