@@ -63,7 +63,7 @@ button:focus {
     background: white;
     position: fixed;
     top: 0vh;
-    margin-left: 6vw;
+/*     margin-left: 6vw; */
     z-index: 2;
     width: 100%;
     box-shadow: 0 0 5px 5px white;
