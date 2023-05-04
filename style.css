@@ -71,9 +71,8 @@ button:focus {
 
   #name img{
     margin-top: 2vh;
-    max-height: 20vh;
-    /* margin-left: 2vw; */
-    /* margin-right: 2vw; */
+    margin-left: 10vw;
+    max-width: 80vw;
     z-index: 2;
   }
 
